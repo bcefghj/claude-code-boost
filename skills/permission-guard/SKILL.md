@@ -5,12 +5,12 @@ metadata:
   openclaw:
     requires:
       config:
-        - mcpServers.clawcode-boost
+        - mcpServers.claude-code-boost
 ---
 
 # Permission Guard
 
-You have access to the `permission_check` and `permission_update` MCP tools from the clawcode-boost server.
+You have access to the `permission_check` and `permission_update` MCP tools from the claude-code-boost server.
 
 ## When to use
 

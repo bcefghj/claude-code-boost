@@ -1,4 +1,4 @@
-# ClawCode Boost — 用 Claude Code 的智慧武装你的 OpenClaw
+# Claude Code Boost — 用 Claude Code 的智慧武装你的 OpenClaw
 
 > 从 Claude Code 架构源码中提取核心设计模式，打造 MCP Server + Skills 工具包，让你的 OpenClaw（小龙虾）变得更聪明、更安全、更高效。
 
@@ -6,24 +6,45 @@
 
 ## 这个项目是什么？
 
-**ClawCode Boost** 是一个 OpenClaw 增强工具包。我们研究了 [claw-code](https://github.com/instructkr/claw-code)（Claude Code 架构的社区重写项目），从中提取了 6 个核心设计模式，并将它们封装成：
+**Claude Code Boost** 是一个 OpenClaw 增强工具包。我们研究了 [claw-code](https://github.com/instructkr/claw-code)（Claude Code 架构的社区重写项目），从中提取了 6 个核心设计模式，并将它们封装成：
 
 - **1 个 MCP Server**（提供 6 个工具）—— 赋予 Agent 新能力
 - **5 个 OpenClaw Skills**（SKILL.md 格式）—— 教 Agent 更聪明地使用这些能力
 - **配置模板** —— 开箱即用的配置文件
 - **详细文档** —— 架构解析 + 其他 Agent 使用指南
+- **哆啦A梦风格漫画教程** —— 生动形象地讲解每个工具
+
+---
+
+## 漫画图解：一图看懂每个工具
+
+> 以下漫画用哆啦A梦风格，帮助你快速理解每个工具的用途和工作原理。
+
+### MCP Server 整体架构
+
+![MCP 架构总览](comics/comic-mcp-overview.png)
+
+### 工具详解
+
+| 工具 | 漫画 |
+|------|------|
+| 智能路由 | ![智能路由](comics/comic-smart-route.png) |
+| 权限守卫 | ![权限守卫](comics/comic-permission-guard.png) |
+| 预算追踪 | ![预算追踪](comics/comic-budget-tracker.png) |
+| 会话记忆 | ![会话记忆](comics/comic-session-memory.png) |
+| 代码审计 | ![代码审计](comics/comic-code-audit.png) |
 
 ---
 
 ## 能解决什么问题？
 
-| 问题 | ClawCode Boost 方案 | 来源灵感 |
+| 问题 | Claude Code Boost 方案 | 来源灵感 |
 |------|---------------------|----------|
-| Agent 不知道用哪个工具 | **智能路由**：评分算法自动匹配最佳工具 | claw-code `runtime.py` |
-| Agent 执行危险操作 | **权限守卫**：执行前自动检查安全策略 | claw-code `permissions.py` |
-| Token 费用失控 | **预算追踪**：实时监控用量，超支自动预警 | claw-code `query_engine.py` |
-| 跨会话丢失进度 | **会话记忆**：保存/恢复工作状态 | claw-code `session_store.py` |
-| 不知道项目处理了多少 | **代码审计**：文件级覆盖率统计 | claw-code `parity_audit.py` |
+| Agent 不知道用哪个工具 | **智能路由**：评分算法自动匹配最佳工具 | Claude Code `runtime.py` |
+| Agent 执行危险操作 | **权限守卫**：执行前自动检查安全策略 | Claude Code `permissions.py` |
+| Token 费用失控 | **预算追踪**：实时监控用量，超支自动预警 | Claude Code `query_engine.py` |
+| 跨会话丢失进度 | **会话记忆**：保存/恢复工作状态 | Claude Code `session_store.py` |
+| 不知道项目处理了多少 | **代码审计**：文件级覆盖率统计 | Claude Code `parity_audit.py` |
 
 ---
 
@@ -60,7 +81,7 @@ cd ..
 ```json
 {
   "mcpServers": {
-    "clawcode-boost": {
+    "claude-code-boost": {
       "command": "node",
       "args": ["/你的完整路径/openclaw-clawcode-boost/mcp-server/dist/index.js"],
       "transport": "stdio"
@@ -103,7 +124,7 @@ openclaw mcp list
 openclaw skills list
 ```
 
-你应该能看到 `clawcode-boost` 出现在 MCP 列表中，以及 5 个 skills 出现在技能列表中。
+你应该能看到 `claude-code-boost` 出现在 MCP 列表中，以及 5 个 skills 出现在技能列表中。
 
 ### 第六步：测试一下！
 
@@ -139,7 +160,7 @@ Agent 会自动使用 `smart_route` 找到最佳工具，使用 `parity_audit` �
   3. [command] config (score: 1) — 查看配置
 ```
 
-**算法来源**：直接移植自 claw-code 的 `runtime.py` 中 `PortRuntime._score()` 方法。
+**算法来源**：直接移植自 Claude Code 源码的 `runtime.py` 中 `PortRuntime._score()` 方法。
 
 ---
 
@@ -279,6 +300,14 @@ openclaw-clawcode-boost/
 ├── README.md                          # 你正在看的这个文件
 ├── LICENSE                            # MIT 开源协议
 │
+├── comics/                            # 哆啦A梦风格漫画教程
+│   ├── comic-mcp-overview.png         # MCP 架构总览
+│   ├── comic-smart-route.png          # 智能路由
+│   ├── comic-permission-guard.png     # 权限守卫
+│   ├── comic-budget-tracker.png       # 预算追踪
+│   ├── comic-session-memory.png       # 会话记忆
+│   └── comic-code-audit.png           # 代码审计
+│
 ├── mcp-server/                        # MCP Server（核心）
 │   ├── package.json                   # Node.js 项目配置
 │   ├── tsconfig.json                  # TypeScript 编译配置
@@ -307,7 +336,7 @@ openclaw-clawcode-boost/
 │   └── project-config.md             # 项目配置文件模板
 │
 └── docs/                              # 补充文档
-    ├── architecture.md                # 架构解析：从 claw-code 学到了什么
+    ├── architecture.md                # 架构解析：从 Claude Code 学到了什么
     └── for-other-agents.md            # 其他 AI Agent 如何使用本项目
 ```
 
@@ -356,7 +385,7 @@ MCP 工具调用本身会消耗少量 token（每次约 50-100 tokens）。但�
 
 ### Q: 如何卸载？
 
-1. 从 `~/.openclaw/openclaw.json` 中删除 `clawcode-boost` 配置
+1. 从 `~/.openclaw/openclaw.json` 中删除 `claude-code-boost` 配置
 2. 从 `~/.openclaw/workspace/skills/` 中删除 5 个 skill 目录
 3. 删除 `openclaw-clawcode-boost` 项目目录
 4. （可选）删除 `~/.openclaw/boost-sessions/` 目录

@@ -5,12 +5,12 @@ metadata:
   openclaw:
     requires:
       config:
-        - mcpServers.clawcode-boost
+        - mcpServers.claude-code-boost
 ---
 
 # Code Audit Helper
 
-You have access to the `parity_audit` MCP tool from the clawcode-boost server.
+You have access to the `parity_audit` MCP tool from the claude-code-boost server.
 
 ## When to use
 

@@ -1,6 +1,6 @@
-# 架构解析：从 Claude Code 源码（claw-code）中学到了什么
+# 架构解析：从 Claude Code 源码中学到了什么
 
-本文档详细解析 claw-code 仓库中值得借鉴的设计模式，以及我们如何将这些模式移植到 OpenClaw 工具包中。
+本文档详细解析 Claude Code 源码仓库中值得借鉴的设计模式，以及我们如何将这些模式移植到 OpenClaw 工具包中。
 
 ---
 
@@ -262,7 +262,7 @@ class ExecutionRegistry:
 
 ## 总结
 
-从 claw-code 学到的不是某个具体功能的实现，而是**如何组织一个 AI Agent 的运行时系统**：
+从 Claude Code 源码学到的不是某个具体功能的实现，而是**如何组织一个 AI Agent 的运行时系统**：
 
 1. 工具目录化、单一真相源
 2. 不可变配置 + 可变状态，清晰的边界

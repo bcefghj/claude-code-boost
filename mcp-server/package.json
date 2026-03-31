@@ -1,11 +1,11 @@
 {
-  "name": "@clawcode-boost/mcp-server",
+  "name": "@claude-code-boost/mcp-server",
   "version": "1.0.0",
   "description": "MCP Server for OpenClaw — bringing Claude Code architecture intelligence to your AI agent",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
-    "clawcode-boost-mcp": "dist/index.js"
+    "claude-code-boost-mcp": "dist/index.js"
   },
   "scripts": {
     "build": "tsc",

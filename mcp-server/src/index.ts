@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
 /**
- * ClawCode Boost MCP Server
+ * Claude Code Boost MCP Server
  *
  * Brings Claude Code's architectural intelligence to OpenClaw and other
- * MCP-compatible AI agents. Implements 6 tools ported from claw-code's
+ * MCP-compatible AI agents. Implements 6 tools ported from Claude Code's
  * core design patterns.
  */
 
@@ -32,7 +32,7 @@ import {
 import { runParityAudit } from "./tools/parity-audit.js";
 
 const server = new McpServer({
-  name: "clawcode-boost",
+  name: "claude-code-boost",
   version: "1.0.0",
 });
 
@@ -343,7 +343,7 @@ server.tool(
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.error("ClawCode Boost MCP Server running on stdio");
+  console.error("Claude Code Boost MCP Server running on stdio");
 }
 
 main().catch((err) => {

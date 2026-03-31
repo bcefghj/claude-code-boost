@@ -31,7 +31,7 @@ Server 通过 stdin/stdout 进行 MCP 通信，不需要网络端口。
 ```json
 {
   "mcpServers": {
-    "clawcode-boost": {
+    "claude-code-boost": {
       "command": "node",
       "args": ["/path/to/openclaw-clawcode-boost/mcp-server/dist/index.js"]
     }
@@ -46,7 +46,7 @@ Server 通过 stdin/stdout 进行 MCP 通信，不需要网络端口。
 ```json
 {
   "mcpServers": {
-    "clawcode-boost": {
+    "claude-code-boost": {
       "command": "node",
       "args": ["/path/to/openclaw-clawcode-boost/mcp-server/dist/index.js"]
     }
@@ -77,7 +77,7 @@ Server 通过 stdin/stdout 进行 MCP 通信，不需要网络端口。
 ```json
 {
   "mcpServers": {
-    "clawcode-boost": {
+    "claude-code-boost": {
       "command": "node",
       "args": ["/path/to/openclaw-clawcode-boost/mcp-server/dist/index.js"],
       "transport": "stdio"
@@ -99,7 +99,7 @@ Server 通过 stdin/stdout 进行 MCP 通信，不需要网络端口。
 ```json
 {
   "mcpServers": {
-    "clawcode-boost": {
+    "claude-code-boost": {
       "command": "node",
       "args": ["/path/to/openclaw-clawcode-boost/mcp-server/dist/index.js"]
     }

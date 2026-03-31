@@ -5,12 +5,12 @@ metadata:
   openclaw:
     requires:
       config:
-        - mcpServers.clawcode-boost
+        - mcpServers.claude-code-boost
 ---
 
 # Smart Task Router
 
-You have access to the `smart_route` MCP tool from the clawcode-boost server.
+You have access to the `smart_route` MCP tool from the claude-code-boost server.
 
 ## When to use
 

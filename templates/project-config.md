@@ -51,9 +51,9 @@ config/        # 配置文件
 - 数据库操作前先备份
 - 不要修改 .env 文件中的生产环境配置
 
-## ClawCode Boost 工具使用说明
+## Claude Code Boost 工具使用说明
 
-本项目已配置 clawcode-boost MCP Server，提供以下增强功能：
+本项目已配置 claude-code-boost MCP Server，提供以下增强功能：
 
 1. **智能路由 (smart_route)**：自动选择最佳工具
 2. **权限守卫 (permission_check)**：执行危险操作前自动检查
