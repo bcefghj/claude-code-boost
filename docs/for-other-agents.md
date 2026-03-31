@@ -15,7 +15,7 @@
 ### 启动命令
 
 ```bash
-node /path/to/openclaw-clawcode-boost/mcp-server/dist/index.js
+node /path/to/claude-code-boost/mcp-server/dist/index.js
 ```
 
 Server 通过 stdin/stdout 进行 MCP 通信，不需要网络端口。
@@ -33,7 +33,7 @@ Server 通过 stdin/stdout 进行 MCP 通信，不需要网络端口。
   "mcpServers": {
     "claude-code-boost": {
       "command": "node",
-      "args": ["/path/to/openclaw-clawcode-boost/mcp-server/dist/index.js"]
+      "args": ["/path/to/claude-code-boost/mcp-server/dist/index.js"]
     }
   }
 }
@@ -48,7 +48,7 @@ Server 通过 stdin/stdout 进行 MCP 通信，不需要网络端口。
   "mcpServers": {
     "claude-code-boost": {
       "command": "node",
-      "args": ["/path/to/openclaw-clawcode-boost/mcp-server/dist/index.js"]
+      "args": ["/path/to/claude-code-boost/mcp-server/dist/index.js"]
     }
   }
 }
@@ -79,7 +79,7 @@ Server 通过 stdin/stdout 进行 MCP 通信，不需要网络端口。
   "mcpServers": {
     "claude-code-boost": {
       "command": "node",
-      "args": ["/path/to/openclaw-clawcode-boost/mcp-server/dist/index.js"],
+      "args": ["/path/to/claude-code-boost/mcp-server/dist/index.js"],
       "transport": "stdio"
     }
   }
@@ -101,7 +101,7 @@ Server 通过 stdin/stdout 进行 MCP 通信，不需要网络端口。
   "mcpServers": {
     "claude-code-boost": {
       "command": "node",
-      "args": ["/path/to/openclaw-clawcode-boost/mcp-server/dist/index.js"]
+      "args": ["/path/to/claude-code-boost/mcp-server/dist/index.js"]
     }
   }
 }
@@ -123,7 +123,7 @@ import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js"
 
 const transport = new StdioClientTransport({
   command: "node",
-  args: ["/path/to/openclaw-clawcode-boost/mcp-server/dist/index.js"],
+  args: ["/path/to/claude-code-boost/mcp-server/dist/index.js"],
 });
 
 const client = new Client({ name: "my-agent", version: "1.0.0" });
