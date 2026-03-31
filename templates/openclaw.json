@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "clawcode-boost": {
+      "command": "node",
+      "args": ["<替换为你的路径>/openclaw-clawcode-boost/mcp-server/dist/index.js"],
+      "transport": "stdio"
+    }
+  }
+}
